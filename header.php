@@ -22,7 +22,7 @@
 
 	<div id="header" class="clearfix" <?php if ( ! empty( $header_image ) ) : ?> style="background-image: url('<?php echo $header_image; ?>');" <?php endif; ?>>
 
-		<?php if ( ! empty( $header_image ) ) : ?><div class="header_overlay"><?php endif; ?>
+		<?php // if ( ! empty( $header_image ) ) : ?> <?php //<div class="header_overlay"><?php endif; ?>
 
 			<div class="inner-wrap">
 
@@ -48,6 +48,11 @@
 
 			</div><!-- end .inner-wrap -->
 
+
+
+		<?php //if ( ! empty( $header_image ) ) : ?> <?php //</div><!-- end .header_overlay --><?php endif; ?>
+
+	</div><!-- end #header -->
 			<div id="main-nav">
 
 				<div class="inner-wrap">
@@ -94,9 +99,4 @@
 				</div><!-- end .inner-wrap -->
 
 			</div><!-- end #main-nav -->
-
-		<?php if ( ! empty( $header_image ) ) : ?></div><!-- end .header_overlay --><?php endif; ?>
-
-	</div><!-- end #header -->
-
 	<div id="wrap">
