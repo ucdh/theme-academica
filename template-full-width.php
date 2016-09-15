@@ -25,5 +25,3 @@ get_header(); ?>
 	<?php endwhile; ?>
 
 </div><!-- end #content -->
-
-<?php get_footer(); ?>

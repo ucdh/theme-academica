@@ -333,12 +333,12 @@ function academica_entry_meta() {
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'academica' ) );
 
-	$date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>',
-		esc_url( get_permalink() ),
-		esc_attr( get_the_time() ),
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() )
-	);
+	// $date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>',
+	//	esc_url( get_permalink() ),
+	//	esc_attr( get_the_time() ),
+	//	esc_attr( get_the_date( 'c' ) ),
+	//	esc_html( get_the_date() )
+	// );
 
 	$author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
@@ -348,16 +348,16 @@ function academica_entry_meta() {
 
 	// Translators: 1 is the author's name, 2 is category, and 3 is the date.
 	if ( $categories_list ) {
-		$utility_text = __( '<span class="by-author">By %1$s </span>in <span class="category">%2$s</span> on <span class="datetime">%3$s</span>', 'academica' );
+		$utility_text = __( '<span class="by-author"> %1$s', 'academica' );
 	} else {
-		$utility_text = __( '<span class="by-author">By %1$s </span>on <span class="datetime">%3$s</span>', 'academica' );
+		$utility_text = __( '<span class="by-author">', 'academica' );
 	}
 
 	printf(
 		$utility_text,
-		$author,
-		$categories_list,
-		$date
+		$author
+		// $categories_list,
+		// $date
 	);
 }
 

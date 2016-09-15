@@ -12,9 +12,9 @@
 		<?php
 		if ( 'post' == get_post_type() && ! is_sticky() ) :
 			printf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
-				esc_url( get_permalink() ),
-				esc_attr( sprintf( __( 'Permanent Link to %s', 'academica' ), the_title_attribute( 'echo=0' ) ) ),
-				esc_html( get_the_date( get_option( 'date_format' ) . ' ' ) )
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'academica' ), get_the_author() ) ),
+				get_the_author()
 			);
 			if ( ! post_password_required() && ( comments_open() || 0 != get_comments_number() ) ) :
 				echo ' <span class="sep">/ </span> ';

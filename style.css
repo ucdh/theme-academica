@@ -37,12 +37,12 @@ body {
 
 #wrap {
  	margin: 0 auto;
-	width: 1170px;
+	width: 950px;
 }
 
 .inner-wrap {
 	margin: 0 auto;
-	width: 1170px;
+	width: 1000px;
 }
 
 article,
@@ -547,6 +547,7 @@ img.aligncenter,
  	width: 100%;
 	border-top: 1px solid rgba(255,255,255,0.1);
 	background-color: #00264d;
+	text-transform: uppercase;
 }
 
 .main-navbar {
@@ -706,7 +707,7 @@ img.aligncenter,
 }
 
 .column-content {
-	width: 600px;
+	width: 100%;
 	word-wrap: break-word;
 }
 
@@ -737,7 +738,7 @@ img.aligncenter,
 #content .column-full,
 .column-full .column-content,
 .page-template-template-full-width-php .column-content {
-	width: 1170px;
+	width: 950px;
 	margin: 0;
 }
 
@@ -745,7 +746,7 @@ img.aligncenter,
 .title-header {
 	font-family: "Monserrat", sans-serif;
 	font-weight: 600;
-	font-size: 36px;
+	font-size: 30px;
  	word-wrap: break-word;
  	margin: 0 0 20px;
 	color: #264d73;
@@ -778,7 +779,7 @@ img.aligncenter,
 
 .posts .post h2,
 .posts .page h2 {
-	font-size: 30px;
+	font-size: 24px;
 	font-family: "Montserrat", sans-serif;
 	font-weight: normal;
 	line-height: 1.5;
@@ -1159,7 +1160,13 @@ p.pages {
 #footer-column div.textwidget p {
 	color: #777;
 	line-height: 1.455;
+	
 }
+
+.footer-wrap {
+	margin: 0 auto;
+}
+
 #wpstats {
 	margin: 1px auto;
 }
@@ -1362,7 +1369,6 @@ p.pages {
 	font-size: 18px;
 	font-family: "Montserrat", sans-serif;
 }
-
 
 
 /* =Featured Posts Gallery Widget

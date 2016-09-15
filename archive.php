@@ -9,11 +9,11 @@ get_header(); ?>
 
 	<div class="column column-title">
 
-		<?php get_template_part( 'breadcrumb' ); ?>
+		<?php  get_template_part( 'breadcrumb' ); ?>
 
 		<h1 class="title-header"><?php
 			if ( is_category() ) {
-				printf( __( 'Category Archives: %s', 'academica' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+				printf(single_cat_title( '', false ) );
 
 			} elseif ( is_tag() ) {
 				printf( __( 'Tag Archives: %s', 'academica' ), '<span>' . single_tag_title( '', false ) . '</span>' );
@@ -22,14 +22,14 @@ get_header(); ?>
 				$authordata = get_userdata( $author );
 				printf( __( 'Author Archives: %s', 'academica' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( $authordata->ID, $authordata->user_nicename ) . '" title="' . esc_attr( $authordata->display_name ) . '" rel="me">' . $authordata->display_name . '</a></span>' );
 
-			} elseif ( is_day() ) {
-				printf( __( 'Daily Archives: %s', 'academica' ), '<span>' . get_the_date() . '</span>' );
+			//} elseif ( is_day() ) {
+				//printf( __( 'Daily Archives: %s', 'academica' ), '<span>' . get_the_date() . '</span>' );
 
-			} elseif ( is_month() ) {
-				printf( __( 'Monthly Archives: %s', 'academica' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+			//} elseif ( is_month() ) {
+				//printf( __( 'Monthly Archives: %s', 'academica' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
-			} elseif ( is_year() ) {
-				printf( __( 'Yearly Archives: %s', 'academica' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+			//} elseif ( is_year() ) {
+				//printf( __( 'Yearly Archives: %s', 'academica' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 			} else {
 				_e( 'Archives', 'academica' );
