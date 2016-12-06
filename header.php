@@ -23,6 +23,7 @@
 	  ga('create', 'UA-26083019-6', 'auto');
 	  ga('send', 'pageview');
 	</script>
+	
 </head>
 
 <body <?php body_class(); ?>>
